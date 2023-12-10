@@ -8,7 +8,7 @@ interface IProps {
   game: Game;
 }
 
-const Gamecard: React.FC<IProps> = ({ game }: IProps) => {
+const Gamecard = ({ game }: IProps) => {
   return (
     <Card>
       <Image src={getCroppedImageUrl(game.background_image)} />
