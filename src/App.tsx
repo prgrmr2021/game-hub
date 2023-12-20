@@ -5,7 +5,7 @@ import GenreList from "./components/GenreList";
 import { useState } from "react";
 import { Genre } from "./hook/useGenres";
 import PlatformSelector from "./components/PlatformSelector";
-import { Platform } from "./hook/useGames";
+import { Platform } from "./hook/usePlatforms";
 import SortSelector from "./components/SortSelector";
 import GameHeading from "./components/GameHeading";
 
@@ -46,7 +46,7 @@ function App() {
         <Flex paddingBottom={5}>
           <Box marginRight={5}>
             <PlatformSelector
-              seletedPlatform={gameQuery.platform}
+              selectedPlatform={gameQuery.platform}
               onSelectPlatform={(platform) =>
                 setGameQuery({ ...gameQuery, platform })
               }
