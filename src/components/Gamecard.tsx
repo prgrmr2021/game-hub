@@ -9,7 +9,7 @@ interface IProps {
   game: Game;
 }
 
-const Gamecard = ({ game }: IProps) => {
+const GameCard = ({ game }: IProps) => {
   return (
     <Card>
       <Image src={getCroppedImageUrl(game.background_image)} />
@@ -18,12 +18,15 @@ const Gamecard = ({ game }: IProps) => {
           <PlatformIconList
             platforms={game.parent_platforms.map(({ platform }) => platform)}
           />
-          <CriticScore score={game.metacritic} />
+          <CriticScore score={game.meteoritic} />
         </HStack>
-        <Heading fontSize="2xl">{game.name}<Emoji rating={game.rating_top}/></Heading>
+        <Heading fontSize="2xl">
+          {game.name}
+          <Emoji rating={game.rating_top} />
+        </Heading>
       </CardBody>
     </Card>
   );
 };
 
-export default Gamecard;
+export default GameCard;
